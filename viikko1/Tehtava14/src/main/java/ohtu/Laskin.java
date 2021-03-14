@@ -1,23 +1,24 @@
 package ohtu;
 
 import java.util.Scanner;
+import ohtu.laskin.IO;
 
 public class Laskin {
 
-    private Scanner lukija;
+    private IO io;
 
-    public Laskin() {
-        lukija = new Scanner(System.in);
+    public Laskin(IO io) {
+        this.io = io;
     }
     
     public void suorita(){
         while( true ) {
             System.out.println("luku 1: ");
-            int luku1 = lukija.nextInt();
+            int luku1 = io.nextInt();
             if ( luku1==-9999  ) return;
             
             System.out.println("luku 2: ");
-            int luku2 = lukija.nextInt();
+            int luku2 = io.nextInt();
             if ( luku2==-9999  ) return;
             
             int vastaus = laskeSumma(luku1, luku2);
