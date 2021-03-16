@@ -15,15 +15,18 @@ public class Kauppa {
         kaupanTili = "33333-44455";
     }
 
+    
     public void aloitaAsiointi() {
         ostoskori = new Ostoskori();
     }
 
+    
     public void poistaKorista(int id) {
         Tuote t = varasto.haeTuote(id); 
         varasto.palautaVarastoon(t);
     }
 
+    
     public void lisaaKoriin(int id) {
         if (varasto.saldo(id)>0) {
             Tuote t = varasto.haeTuote(id);             
@@ -32,6 +35,7 @@ public class Kauppa {
         }
     }
 
+    
     public boolean tilimaksu(String nimi, String tiliNumero) {
         int viite = viitegeneraattori.uusi();
         int summa = ostoskori.hinta();
