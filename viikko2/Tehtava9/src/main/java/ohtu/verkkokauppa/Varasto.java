@@ -1,11 +1,13 @@
 package ohtu.verkkokauppa;
 
 import java.util.*;
+
 @Component
 public class Varasto implements VarastoRajapinta {
 
     private KirjanpitoRajapinta kirjanpito;
     private HashMap<Tuote, Integer> saldot;  
+    
     @Autowired
     public Varasto(KirjanpitoRajapinta kirjanpitoViite) {
         kirjanpito = kirjanpitoViite;

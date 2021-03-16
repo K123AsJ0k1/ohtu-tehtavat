@@ -2,6 +2,7 @@
 package ohtu.verkkokauppa;
 
 import java.util.ArrayList;
+
 @Component
 public class Kirjanpito implements KirjanpitoRajapinta {
     
