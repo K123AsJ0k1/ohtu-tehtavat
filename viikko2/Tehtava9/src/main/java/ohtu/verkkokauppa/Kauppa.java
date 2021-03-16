@@ -1,14 +1,15 @@
 package ohtu.verkkokauppa;
 
+@Component
 public class Kauppa {
 
-    
     VarastoRajapinta varasto;
     PankkiRajapinta pankki;
     GeneraattoriRajapinta viitegeneraattori;
     private Ostoskori ostoskori;
     private String kaupanTili;
-
+    
+    @Autowired
     public Kauppa(VarastoRajapinta varastoViite, PankkiRajapinta pankkiViite, GeneraattoriRajapinta generaattoriViite) {
         this.varasto = varastoViite;
         this.pankki = pankkiViite;

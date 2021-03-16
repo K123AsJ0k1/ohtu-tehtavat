@@ -2,11 +2,11 @@
 package ohtu.verkkokauppa;
 
 import java.util.ArrayList;
-
+@Component
 public class Kirjanpito implements KirjanpitoRajapinta {
     
     private ArrayList<String> tapahtumat;
-
+    
     public Kirjanpito() {
         tapahtumat = new ArrayList<String>();
     }

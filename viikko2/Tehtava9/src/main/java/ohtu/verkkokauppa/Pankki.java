@@ -1,9 +1,9 @@
 package ohtu.verkkokauppa;
-
+@Component
 public class Pankki implements PankkiRajapinta {
 
     private KirjanpitoRajapinta kirjanpito;
-
+    @Autowired
     public Pankki(KirjanpitoRajapinta kirjanpitoViite) {
         kirjanpito = kirjanpitoViite;
     }
