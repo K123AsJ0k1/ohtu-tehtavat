@@ -15,15 +15,19 @@ public class Main {
         
         String bodyText = Request.Get(url).execute().returnContent().asString();
                 
-        System.out.println("json-muotoinen data:");
-        System.out.println( bodyText );
+        //System.out.println("json-muotoinen data:");
+        //System.out.println( bodyText );
 
         Gson mapper = new Gson();
         Player[] players = mapper.fromJson(bodyText, Player[].class);
         
-        System.out.println("Oliot:");
+        
+        //System.out.println("Oliot:");
+        System.out.println("Players from FIN"+ "\n");
         for (Player player : players) {
-            System.out.println(player);
+            if (player.getNationality().equals("FIN")) {
+                System.out.println(player);
+            }
         }   
     }
   
