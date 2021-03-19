@@ -37,13 +37,15 @@ public class Tester {
         element.click();
 
         sleep(2);
-        
+        random r = new Random();
+
         element = driver.findElement(By.name("username"));
-        element.sendKeys("kokeilu");
+        element.sendKeys("kokeilu" + r.nextInt(100000));
+        int arvo = r.nextInt(100000);
         element = driver.findElement(By.name("password"));
-        element.sendKeys("kokeiluSalasana2");
+        element.sendKeys("kokeiluSalasana2" + arvo);
         element = driver.findElement(By.name("passwordConfirmation"));
-        element.sendKeys("kokeiluSalasana2");
+        element.sendKeys("kokeiluSalasana2" + arvo);
         element = driver.findElement(By.name("signup"));
         
         sleep(2);
@@ -58,13 +60,15 @@ public class Tester {
         element.click();
 
         sleep(2);
-        
+        random r = new Random();
+
         element = driver.findElement(By.name("username"));
-        element.sendKeys("kokeilu4");
+        element.sendKeys("kokeilu" + r.nextInt(100000));
+        int arvo = r.nextInt(100000);
         element = driver.findElement(By.name("password"));
-        element.sendKeys("kokeiluSalasana3");
+        element.sendKeys("kokeiluSalasana" + arvo);
         element = driver.findElement(By.name("passwordConfirmation"));
-        element.sendKeys("kokeiluSalasana3");
+        element.sendKeys("kokeiluSalasana" + arvo);
         element = driver.findElement(By.name("signup"));
         
         sleep(2);
