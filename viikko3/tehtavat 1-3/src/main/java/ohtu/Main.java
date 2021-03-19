@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Players from FIN"+ "\n");
         for (Player player : players) {
             if (player.getNationality().equals("FIN")) {
-                System.out.println(player);
+                System.out.println(player.tulosta());
             }
         }   
     }

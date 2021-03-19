@@ -37,6 +37,10 @@ public class Player {
         return assists;
     }
 
+    public String tulosta() {
+        return name + "  " + team + "  "+ goals + " + " + assists + " = " + (goals + assists); 
+    }
+
     @Override
     public String toString() {
         return name + " nationality " + nationality + " team " + team + " goals " + goals + " assists " + assists;
