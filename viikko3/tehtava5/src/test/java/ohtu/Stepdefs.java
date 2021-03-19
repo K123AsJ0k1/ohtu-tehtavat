@@ -45,4 +45,16 @@ public class Stepdefs {
         assertTrue(io.getPrints().contains(expectedOutput));
     }    
 
+    @Given("^command new is selected$")
+    public void newLoginSelected() throws Throwable {
+        inputLines.add("new");
+    }
+    
+    @Given("user {string} with password {string} is created")
+    public void userIsCreated(String username, String password) throws Throwable {
+        inputLines.add("new");
+        inputLines.add(username);
+        inputLines.add(password);
+    }
+
 }
