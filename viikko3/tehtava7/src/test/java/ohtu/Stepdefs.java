@@ -81,6 +81,22 @@ public class Stepdefs {
     public void confirmationError(String username, String password, String passwordConfirmation) throws Throwable {
         signUpWithConfirmation(username, password, passwordConfirmation);
     }
+
+    @Given("user with username {string} with password {string} is successfully created")
+    public void succesfullUserCreation(String username, String password) throws Throwable {
+        driver.get(baseUrl);
+        WebElement element = driver.findElement(By.linkText("register new user"));
+        element.click();
+        signUpWith(username, password);
+    }
+
+    @Given("user with username {string} and password {string} is tried to be created")
+    public void unsuccesfullUserCreation(String username, String password) throws Throwable {
+        driver.get(baseUrl);
+        WebElement element = driver.findElement(By.linkText("register new user"));
+        element.click();
+        signUpWith(username, password);
+    }
     
     @Then("system will respond {string}")
     public void systemWillRespond(String pageContent) throws Throwable {
