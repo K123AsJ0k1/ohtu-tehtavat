@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Random;
 
 public class Tester {
 
@@ -31,13 +32,15 @@ public class Tester {
         element.submit();
 
         sleep(3);
+
+        driver.quit();
         */
         /*
         WebElement element = driver.findElement(By.linkText("register new user"));
         element.click();
 
         sleep(2);
-        random r = new Random();
+        Random r = new Random();
 
         element = driver.findElement(By.name("username"));
         element.sendKeys("kokeilu" + r.nextInt(100000));
@@ -55,12 +58,12 @@ public class Tester {
 
         driver.quit();
         */
-
+        /*
         WebElement element = driver.findElement(By.linkText("register new user"));
         element.click();
 
         sleep(2);
-        random r = new Random();
+        Random r = new Random();
 
         element = driver.findElement(By.name("username"));
         element.sendKeys("kokeilu" + r.nextInt(100000));
@@ -85,10 +88,9 @@ public class Tester {
         element.click();
 
         sleep(2);
-
+        
         driver.quit();
-
-       
+        */
     }
     
     private static void sleep(int n){
