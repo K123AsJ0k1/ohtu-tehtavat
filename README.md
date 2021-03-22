@@ -22,6 +22,18 @@ Viikko 3
 
 [Tehtavat 7-11](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko3/tehtavat7-11)
 
+Viikko 4
+
+[Tehtava 1](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko4/tehtava1)
+
+[Tehtava 2](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko4/tehtava2)
+
+[Tehtavat 3-4](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko4/tehtava3-4)
+
+[Tehtava 5](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko4/tehtava5)
+
+[Tehtava 6](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko4/tehtava6)
+
 
 
 
