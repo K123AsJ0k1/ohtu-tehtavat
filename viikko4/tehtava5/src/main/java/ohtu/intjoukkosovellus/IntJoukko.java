@@ -49,18 +49,24 @@ public class IntJoukko {
         } 
         
         if (!kuuluu(luku)) {
-            lukujono[alkioidenmaara] = luku;
-            alkioidenmaara++;
-            if (alkioidenmaara % lukujono.length == 0) {
-                int[] vanha_taulukko = new int[lukujono.length];
-                kopioiTaulukko(lukujono, vanha_taulukko);
-                lukujono = new int[alkioidenmaara + kasvatuskoko];
-                kopioiTaulukko(vanha_taulukko, lukujono);
-            }
+            taulukonMuutos(luku);
             return true;
         }
         return false;
     }
+
+    public void taulukonMuutos(int luku) {
+        lukujono[alkioidenmaara] = luku;
+        alkioidenmaara++;
+        
+        if (alkioidenmaara % lukujono.length == 0) {
+            int[] vanha_taulukko = new int[lukujono.length];
+            kopioiTaulukko(lukujono, vanha_taulukko);
+            lukujono = new int[alkioidenmaara + kasvatuskoko];
+            kopioiTaulukko(vanha_taulukko, lukujono);
+        }
+    }
+
 
     public boolean kuuluu(int luku) {
         for (int i = 0; i < alkioidenmaara; i++) {
@@ -73,7 +79,7 @@ public class IntJoukko {
 
     public boolean poista(int luku) {
         int poistettava_indeksi = -1;
-        int apu_luku;
+        
         for (int i = 0; i < alkioidenmaara; i++) {
             if (luku == lukujono[i]) {
                 poistettava_indeksi = i; 
@@ -82,15 +88,22 @@ public class IntJoukko {
             }
         }
         if (poistettava_indeksi != -1) {
-            for (int j = poistettava_indeksi; j < alkioidenmaara - 1; j++) {
-                apu_luku = lukujono[j];
-                lukujono[j] = lukujono[j + 1];
-                lukujono[j + 1] = apu_luku;
-            }
-            alkioidenmaara--;
+            poisto(poistettava_indeksi);
             return true;
         }
         return false;
+    }
+
+    public void poisto(int poistettava_indeksi) {
+        int apu_luku;
+        
+        for (int j = poistettava_indeksi; j < alkioidenmaara - 1; j++) {
+            apu_luku = lukujono[j];
+            lukujono[j] = lukujono[j + 1];
+            lukujono[j + 1] = apu_luku;
+        }
+
+        alkioidenmaara--;
     }
 
     private void kopioiTaulukko(int[] vanha, int[] uusi) {
@@ -103,7 +116,6 @@ public class IntJoukko {
         return alkioidenmaara;
     }
 
-
     @Override
     public String toString() {
         if (alkioidenmaara == 0) {
@@ -111,15 +123,21 @@ public class IntJoukko {
         } else if (alkioidenmaara == 1) {
             return "{" + lukujono[0] + "}";
         } else {
-            String tuotos = "{";
-            for (int i = 0; i < alkioidenmaara - 1; i++) {
-                tuotos += lukujono[i];
-                tuotos += ", ";
-            }
-            tuotos += lukujono[alkioidenmaara - 1];
-            tuotos += "}";
-            return tuotos;
+            return tulosteenTuottaja();
         }
+    }
+
+    public String tulosteenTuottaja() {
+        String tuloste = "{";
+        
+        for (int i = 0; i < alkioidenmaara - 1; i++) {
+            tuloste  += lukujono[i];
+            tuloste  += ", ";
+        }
+        tuloste  += lukujono[alkioidenmaara - 1];
+        tuloste  += "}";
+        
+        return tuloste;
     }
 
     public int[] toIntArray() {

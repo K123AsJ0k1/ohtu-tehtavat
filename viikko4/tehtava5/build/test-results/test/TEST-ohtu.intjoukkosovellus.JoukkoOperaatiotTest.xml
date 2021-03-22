@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ohtu.intjoukkosovellus.JoukkoOperaatiotTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-22T11:36:00" hostname="LAPTOP-T869T3NR" time="0.0">
+<testsuite name="ohtu.intjoukkosovellus.JoukkoOperaatiotTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-22T13:18:45" hostname="LAPTOP-T869T3NR" time="0.0">
   <properties/>
   <testcase name="testLeikkaus" classname="ohtu.intjoukkosovellus.JoukkoOperaatiotTest" time="0.0"/>
   <testcase name="testYhdiste" classname="ohtu.intjoukkosovellus.JoukkoOperaatiotTest" time="0.0"/>
