@@ -34,3 +34,4 @@ public class KauppaTest {
         // toistaiseksi ei välitetty kutsussa käytetyistä parametreista
     }
 }
+
