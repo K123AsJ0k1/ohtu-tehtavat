@@ -12,6 +12,7 @@ public class Nollaa implements Komento {
     JButton nollaa;
     JButton undo;
     Sovelluslogiikka sovellus;
+    Integer edellinen;
 
     public Nollaa(JTextField tuloskentta, JTextField syotekentta, JButton nollaa, JButton undo, Sovelluslogiikka sovellus) {
         this.tuloskentta = tuloskentta;
@@ -19,10 +20,13 @@ public class Nollaa implements Komento {
         this.nollaa = nollaa;
         this.undo = undo;
         this.sovellus = sovellus;
+        this.edellinen = 0;
     }
 
     @Override
     public void suorita() {
+        this.edellinen = sovellus.tulos();
+
         sovellus.nollaa();
 
         int laskunTulos = sovellus.tulos();
@@ -40,7 +44,19 @@ public class Nollaa implements Komento {
 
     @Override
     public void peru() {
+        sovellus.returnTulos(this.edellinen);
 
+        int laskunTulos = sovellus.tulos();
+         
+        syotekentta.setText("");
+        tuloskentta.setText("" + laskunTulos);
+        
+        if (laskunTulos == 0) {
+            nollaa.setEnabled(false);
+        } else {
+            nollaa.setEnabled(true);
+        }
+        undo.setEnabled(true);
     }
 
 

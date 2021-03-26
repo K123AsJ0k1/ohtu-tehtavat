@@ -12,6 +12,7 @@ public class Summa implements Komento {
     JButton nollaa;
     JButton undo;
     Sovelluslogiikka sovellus;
+    Integer edellinen_arvo;
 
     public Summa(JTextField tuloskentta, JTextField syotekentta, JButton nollaa, JButton undo, Sovelluslogiikka sovellus) {
         this.tuloskentta = tuloskentta;
@@ -19,6 +20,7 @@ public class Summa implements Komento {
         this.nollaa = nollaa;
         this.undo = undo;
         this.sovellus = sovellus;
+        this.edellinen_arvo = 0;
     }
 
     @Override
@@ -32,6 +34,8 @@ public class Summa implements Komento {
         
         sovellus.plus(arvo);
 
+        this.edellinen_arvo = arvo;
+        
         int laskunTulos = sovellus.tulos();
          
         syotekentta.setText("");
@@ -47,7 +51,20 @@ public class Summa implements Komento {
 
     @Override
     public void peru() {
-
+        sovellus.miinus(this.edellinen_arvo);
+        this.edellinen_arvo = 0;
+        
+        int laskunTulos = sovellus.tulos();
+         
+        syotekentta.setText("");
+        tuloskentta.setText("" + laskunTulos);
+        
+        if (laskunTulos == 0) {
+            nollaa.setEnabled(false);
+        } else {
+            nollaa.setEnabled(true);
+        }
+        undo.setEnabled(true);
     }
 
 

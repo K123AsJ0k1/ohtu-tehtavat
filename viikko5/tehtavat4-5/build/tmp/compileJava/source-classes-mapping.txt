@@ -1,16 +1,16 @@
-ohtu/Summa.java
- ohtu.Summa
-ohtu/Nollaa.java
- ohtu.Nollaa
-ohtu/Erotus.java
- ohtu.Erotus
 ohtu/Main.java
  ohtu.Main
 ohtu/Komento.java
  ohtu.Komento
-ohtu/Sovelluslogiikka.java
- ohtu.Sovelluslogiikka
 ohtu/GraafinenLaskin.java
  ohtu.GraafinenLaskin
+ohtu/Summa.java
+ ohtu.Summa
+ohtu/Erotus.java
+ ohtu.Erotus
 ohtu/Tapahtumankuuntelija.java
  ohtu.Tapahtumankuuntelija
+ohtu/Nollaa.java
+ ohtu.Nollaa
+ohtu/Sovelluslogiikka.java
+ ohtu.Sovelluslogiikka
