@@ -38,6 +38,10 @@ Viikko 5
 
 [Tehtavat 4-5](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko5/tehtavat4-5)
 
+Viikko 6
+
+[Tehtavat 2-5](https://github.com/K123AsJ0k1/ohtu-tehtavat/tree/main/viikko6)
+
 
 
 
