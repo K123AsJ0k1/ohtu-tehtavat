@@ -11,14 +11,16 @@ package statistics.matcher;
  */
 public class QueryBuilder {
     
-    Matcher matcher;
+    private Matcher matcher;
     
     public QueryBuilder() {
         matcher = new All();
     }
     
     public Matcher build() {
-        return matcher;
+        Matcher muisto = matcher;
+        matcher = new All();
+        return muisto;
     }
     
     public QueryBuilder playsIn(String team) {
@@ -36,6 +38,12 @@ public class QueryBuilder {
     public QueryBuilder hasFewerThan(int value, String category) {
         Matcher muisto = this.matcher;
         this.matcher = new And(muisto,new HasFewerThan(value,category));
+        return this;
+    }
+    
+    public QueryBuilder oneOf(Matcher... matchers) {
+        Matcher muisto = this.matcher;
+        this.matcher = new Or(matchers);
         return this;
     }
     
