@@ -2,8 +2,14 @@ package ohtu.kivipaperisakset;
 
 import java.util.Scanner;
 
-public class KPSPelaajaVsPelaaja {
+public class KPSPelaajaVsPelaaja extends KiviPaperiSakset {
 
+    @Override
+    protected String toisenSiirto() {
+        return scanner.nextLine();  
+    }
+    
+    /*
     private static final Scanner scanner = new Scanner(System.in);
 
     public void pelaa() {
@@ -34,4 +40,6 @@ public class KPSPelaajaVsPelaaja {
     private static boolean onkoOkSiirto(String siirto) {
         return "k".equals(siirto) || "p".equals(siirto) || "s".equals(siirto);
     }
+    */
+    
 }
